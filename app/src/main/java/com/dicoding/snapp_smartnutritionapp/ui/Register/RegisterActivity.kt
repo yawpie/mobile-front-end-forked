@@ -7,10 +7,12 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.snapp_smartnutritionapp.data.response.RegisterRequest
 import com.dicoding.snapp_smartnutritionapp.data.response.RegisterResponse
 import com.dicoding.snapp_smartnutritionapp.data.retrofit.ApiConfig
 import com.dicoding.snapp_smartnutritionapp.data.retrofit.ApiService
 import com.dicoding.snapp_smartnutritionapp.databinding.ActivityRegisterBinding
+import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,7 +48,8 @@ class RegisterActivity : AppCompatActivity() {
 
     fun registerUser(username: String, email: String, password: String) {
         showLoading(true)
-        val client = ApiConfig.getApiService().register(username, email, password)
+        val request = RegisterRequest(username, email, password)
+        val client = ApiConfig.getApiService().register(request)
         client.enqueue(object : Callback<RegisterResponse> {
             override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
                 showLoading(false)
@@ -57,7 +60,8 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 } else {
                     // Tangani jika ada error dari server
-                    Log.e(TAG, "Registration Failed: ${response.message()}")
+                    val errorBody = Gson().fromJson(response.errorBody()?.string(), RegisterResponse::class.java)
+                    Log.e(TAG, "Registration Failed: ${errorBody.message}")
                 }
             }
 

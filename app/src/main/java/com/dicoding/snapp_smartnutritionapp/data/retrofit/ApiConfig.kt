@@ -14,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://34.128.70.149:5000/")
+                .baseUrl("http://34.128.70.149:5000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
@@ -22,14 +22,3 @@ class ApiConfig {
         }
     }
 }
-
-//data class RegisterResponse(
-//    val message: String? = null
-//)
-//
-//data class RegisterRequest(
-//    val username: String,
-//    val email: String,
-//    val password: String
-//)
-
