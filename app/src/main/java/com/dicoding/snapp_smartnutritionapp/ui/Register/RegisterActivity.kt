@@ -31,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         apiService = ApiConfig.getApiService()
 
@@ -44,8 +45,6 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
     }
-
-
     fun registerUser(username: String, email: String, password: String) {
         showLoading(true)
         val request = RegisterRequest(username, email, password)
@@ -57,6 +56,7 @@ class RegisterActivity : AppCompatActivity() {
                     // Logika jika berhasil
                     response.body()?.let {
                         Log.d(TAG, "Registration Success: ${it.message}")
+                        
                     }
                 } else {
                     // Tangani jika ada error dari server

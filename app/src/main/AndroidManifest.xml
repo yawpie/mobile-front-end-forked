@@ -13,12 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SNAPPSmartNutritionApp"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.Register.RegisterViewActivity"
+            android:name=".ui.Navigation.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".ui.Login.Loginactivity"
             android:exported="false" />
         <activity
-            android:name=".ui.GetStarted.GetStartedActivity"
+            android:name=".ui.Register.RegisterViewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Register.RegisterActivity"

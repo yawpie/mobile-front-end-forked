@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.Register.RegisterActivity">
+    tools:context=".ui.Login.Loginactivity">
 
     <TextView
         android:id="@+id/HeadingLogin"
@@ -16,7 +16,7 @@
         android:layout_marginStart="39dp"
         android:layout_marginTop="133dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Register"
+        android:text="@string/login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -26,64 +26,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:fontFamily="@font/poppins"
-        android:text="Register to Continue"
+        android:text="@string/sign_in_to_countinue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/HeadingLogin" />
-    <!--    Your Username-->
+    <!--    Login-->
     <TextView
-        android:id="@+id/inputUsername"
+        android:id="@+id/Login"
         style="@style/heading_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:layout_marginStart="39dp"
         android:layout_marginTop="98dp"
-        android:text="Username"
+        android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputUsername_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_radio_button_checked_24"
-        app:startIconTint="@color/Primary">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_inputUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Your Username"
-            android:fontFamily="@font/poppins"
-            android:inputType="textEmailAddress"
-            android:textSize="16sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <!--    Your Email-->
-    <TextView
-        android:id="@+id/inputEmail"
-        style="@style/heading_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="22dp"
-        android:text="Email Address"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputEmail_layout"
+        android:id="@+id/email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
@@ -98,14 +58,14 @@
             android:id="@+id/edit_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your Email Address"
+            android:hint="Email"
             android:fontFamily="@font/poppins"
             android:inputType="textEmailAddress"
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <!--    Your Password-->
+    <!--    Password-->
     <TextView
-        android:id="@+id/inputPassword"
+        android:id="@+id/pasword"
         style="@style/heading_2"
         android:fontFamily="@font/poppins_medium"
         android:layout_width="wrap_content"
@@ -116,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputPassword_layout"
+        android:id="@+id/password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
@@ -132,20 +92,59 @@
         app:startIconTint="@color/Primary"
         app:passwordToggleContentDescription="show pasword">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_inputPassword"
+            android:id="@+id/edit_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your Password"
+            android:hint="@string/password"
             android:fontFamily="@font/poppins"
             android:inputType="textEmailAddress"
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-        android:id="@+id/SignUp"
+        android:id="@+id/tvLogin"
         android:layout_width="315dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="39dp"
-        android:text="Sign Up"
+        android:text="@string/login"
         app:layout_constraintTop_toBottomOf="@+id/password_layout"/>
+    <TextView
+        style="@style/heading_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/login_with_google"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+    <Button
+        android:id="@+id/SignInWithGoogle"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="85dp"
+        android:text="@string/sign_in_with_google"
+        android:drawablePadding="8dp" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account" />
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="@color/Primary"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
 </LinearLayout>

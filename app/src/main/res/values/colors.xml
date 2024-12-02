@@ -6,4 +6,5 @@
     <color name="Secondary">#95F452</color>
     <color name="Tertiary">#000000</color>
     <color name="OnTertiary">#929292</color>
+    <color name="White">#ffffff</color>
 </resources>
