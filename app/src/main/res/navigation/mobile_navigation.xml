@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.dicoding.snapp_smartnutritionapp.ui.Navigation.ui.dashboard.DashboardFragment"
+        android:name="com.dicoding.snapp_smartnutritionapp.ui.Navigation.ui.Scan.ScanFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_scan" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.dicoding.snapp_smartnutritionapp.ui.Navigation.ui.notifications.NotificationsFragment"
+        android:name="com.dicoding.snapp_smartnutritionapp.ui.Navigation.ui.bookmark.BookmarkFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_bookmark" />
 </navigation>
