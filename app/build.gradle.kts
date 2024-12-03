@@ -36,6 +36,7 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        mlModelBinding = true
     }
 }
 
@@ -51,6 +52,10 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    // CameraX
+    implementation(libs.camera.view)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,5 +65,6 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 //    Google Material
     implementation ("com.google.android.material:material:1.7.0")
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
 //    Github
 }
