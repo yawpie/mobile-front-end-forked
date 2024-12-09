@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.Register.RegisterActivity">
-
     <TextView
         android:id="@+id/HeadingLogin"
         style="@style/heading"
@@ -46,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -74,21 +73,13 @@
         android:text="Email Address"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputEmail_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -104,6 +95,7 @@
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <!--    Your Password-->
+    
     <TextView
         android:id="@+id/inputPassword"
         style="@style/heading_2"
@@ -121,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -137,15 +129,17 @@
             android:layout_height="wrap_content"
             android:hint="Your Password"
             android:fontFamily="@font/poppins"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/SignUp"
-        android:layout_width="315dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp"
         android:text="Sign Up"
         app:layout_constraintTop_toBottomOf="@+id/password_layout"/>
 </LinearLayout>
