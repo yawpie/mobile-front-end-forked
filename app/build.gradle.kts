@@ -68,4 +68,5 @@ dependencies {
     // github
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation ("com.github.ybq:Android-SpinKit:1.4.0")
 }

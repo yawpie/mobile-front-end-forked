@@ -22,6 +22,8 @@ import androidx.core.content.ContextCompat
 import android.animation.ObjectAnimator
 import android.view.animation.DecelerateInterpolator
 import android.widget.ProgressBar
+import android.view.View
+import com.dicoding.snapp_smartnutritionapp.ui.LoadingDialog
 
 class DetailActivity : AppCompatActivity() {
     private var _binding: ActivityDetailBinding? = null
@@ -59,6 +61,10 @@ class DetailActivity : AppCompatActivity() {
                         .into(imageView)
                 }
             }
+        }
+
+        detailEventViewModel.isLoading.observe(this) {
+            showLoading(it)
         }
 
         setupBarChart()
@@ -128,6 +134,13 @@ class DetailActivity : AppCompatActivity() {
 
             // Animasi
             animateY(2000)
+        }
+    }
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            LoadingDialog.show(this)
+        } else {
+            LoadingDialog.hide()
         }
     }
 

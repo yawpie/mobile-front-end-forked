@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.snapp_smartnutritionapp.databinding.ActivityMainBinding
-import com.dicoding.snapp_smartnutritionapp.ui.Login.Loginactivity
+import com.dicoding.snapp_smartnutritionapp.ui.Login.LoginActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val tvStarted = findViewById<TextView>(R.id.Started)
         tvStarted.setOnClickListener {
-            val intent = Intent(this, Loginactivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

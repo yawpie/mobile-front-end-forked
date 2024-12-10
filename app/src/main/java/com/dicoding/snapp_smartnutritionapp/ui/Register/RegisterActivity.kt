@@ -98,7 +98,6 @@ class RegisterActivity : AppCompatActivity() {
         }
         return true
     }
-
     // Fungsi untuk menampilkan atau menyembunyikan dialog loading
     private fun showLoading(isLoading: Boolean) {
     }
